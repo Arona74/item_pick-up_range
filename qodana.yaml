@@ -4,28 +4,29 @@
 #-------------------------------------------------------------------------------#
 version: "1.0"
 
-#Specify inspection profile for code analysis
+# Specify inspection profile for code analysis
 profile:
   name: qodana.starter
 
-#Enable inspections
+# Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
 
-#Disable inspections
+# Disable inspections
 #exclude:
 #  - name: <SomeDisabledInspectionId>
 #    paths:
 #      - <path/where/not/run/inspection>
 
-projectJDK: 8 #(Applied in CI/CD pipeline)
+# Use Java 17 for analysis (matches Minecraft 1.20.1)
+projectJDK: 17
 
-#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
+# Execute shell command before Qodana execution (Applied in CI/CD pipeline)
 #bootstrap: sh ./prepare-qodana.sh
 
-#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
+# Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
 
-#Specify Qodana linter for analysis (Applied in CI/CD pipeline)
+# Specify Qodana linter for analysis (Applied in CI/CD pipeline)
 linter: jetbrains/qodana-jvm-community:latest
