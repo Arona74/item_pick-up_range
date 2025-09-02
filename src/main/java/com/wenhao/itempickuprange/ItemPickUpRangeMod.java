@@ -17,7 +17,7 @@ public class ItemPickUpRangeMod implements ModInitializer {
             PickupRangeCommand.register(dispatcher);
         });
 
-        ServerLifecycleEvents.SERVER_STARTING.register(server -> {
+        ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             File configDir = new File("config");
             ModConfig.load(configDir);
 
